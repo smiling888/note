@@ -1,4 +1,4 @@
-package com.chase.course.controller;
+package com.chase.controller;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
