@@ -1,5 +1,6 @@
 package com.chase.config;
 
+import com.chase.config.condition.MacSysCondition;
 import com.chase.repository.GoodItemRepository;
 import com.chase.repository.GoodRepository;
 import org.slf4j.LoggerFactory;
@@ -8,6 +9,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -15,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * Date: 2021/2/5
  **/
 @Configuration
-public class DemoConfig {
+public class ConditionDemoConfig {
 
     @Bean
     @ConditionalOnBean(GoodRepository.class)
@@ -47,11 +49,18 @@ public class DemoConfig {
         return new GoodItemRepository();
     }
 
-    //设置matchIfMissing=true，当配置文件中没有配置spring.application.name 也会生成这个bean
-//    @Bean
-//    @ConditionalOnProperty(name="spring.application.name",matchIfMissing = true)
-//    public GoodItemRepository goodItemRepository5(){
-//        System.out.println("goodItemRepository5");
-//        return new GoodItemRepository();
-//    }
+//    自定义条件
+
+    /**
+     *
+     * @return
+     */
+    @Bean
+    @Conditional(MacSysCondition.class)
+    public GoodItemRepository goodItemRepository5(){
+        System.out.println("goodItemRepository5");
+        return new GoodItemRepository();
+    }
+
+
 }
