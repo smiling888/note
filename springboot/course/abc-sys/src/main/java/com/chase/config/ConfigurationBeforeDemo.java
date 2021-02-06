@@ -3,7 +3,7 @@ package com.chase.config;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author jiuxing.lzh
+ * @author chase
  * Date: 2021/2/6
  **/
 @Configuration
