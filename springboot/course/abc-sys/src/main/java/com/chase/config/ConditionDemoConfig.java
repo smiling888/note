@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author jiuxing.lzh
+ * @author chase
  * Date: 2021/2/5
  **/
 @Configuration
@@ -49,10 +49,8 @@ public class ConditionDemoConfig {
         return new GoodItemRepository();
     }
 
-//    自定义条件
-
     /**
-     *
+     * 使用自定义条件判断 MacSysCondition 如果是mac系统就创建这个bean
      * @return
      */
     @Bean

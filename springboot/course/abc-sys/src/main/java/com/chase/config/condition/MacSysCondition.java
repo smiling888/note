@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
 /**
- * @author jiuxing.lzh
+ * @author chase
  * Date: 2021/2/6
  **/
 public class MacSysCondition implements Condition {

@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @author jiuxing.lzh
+ * @author chase
  * Date: 2021/2/5
  **/
 @RestController

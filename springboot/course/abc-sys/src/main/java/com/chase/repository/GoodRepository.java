@@ -1,7 +1,7 @@
 package com.chase.repository;
 
 /**
- * @author jiuxing.lzh
+ * @author chase
  * Date: 2021/2/5
  **/
 public class GoodRepository {
