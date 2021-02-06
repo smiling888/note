@@ -1,5 +1,6 @@
 package com.chase.config;
 
+
 /**
  * 普通类作为配置类导入
  * 在启动类加Import即可
